@@ -1,0 +1,19 @@
+#testing some things in here
+
+cols <- c("NPS Counties"="green", "Non-NPS Counties"="red")
+
+covid.data <- data.frame (NPS=NPScounty_comparisons$Confirmed_NPS, 
+                          no_NPS=NPScounty_comparisons$Confirmed_no_NPS,
+                          Date=NPScounty_comparisons$Date)
+
+  covid.data$Date <- lubridate::ymd (covid.data$Date)
+  plot6 <- ggplot2::ggplot (data=covid.data, aes(x=Date, y=NPS)) + 
+    geom_smooth(aes (col="NPS Counties")) +
+    geom_smooth(aes (y=no_NPS, col="Non-NPS Counties")) +
+    theme_classic() +
+    labs (title="Title") +
+    scale_color_manual(name = "Counties",
+                       values = cols)
+  
+  plot6
+  

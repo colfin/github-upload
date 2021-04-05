@@ -1,0 +1,12 @@
+name: environmentalimpacts
+title: environmentalimpacts
+username:
+account: scomet
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3718177
+bundleId: 4385970
+url: https://scomet.shinyapps.io/environmentalimpacts/
+when: 1616526472.61343
+asMultiple: FALSE
+asStatic: FALSE
